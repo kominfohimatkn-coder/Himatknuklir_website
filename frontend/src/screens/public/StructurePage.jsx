@@ -90,14 +90,18 @@ export default function StructurePage({ initialData = null }) {
 
   const grouped = data.struktur_grouped || {}
   const entries = Object.entries(grouped)
+
   const pembimbing = entries.find(([name]) => /pembimbing/i.test(name))
   const root = entries.find(([name]) => /badan pengurus|bph|pimpinan/i.test(name))
-  const others = entries.filter(([name]) => name !== pembimbing?.[0] && name !== root?.[0])
+  const others = entries.filter(
+    ([name]) => name !== pembimbing?.[0] && name !== root?.[0]
+  )
+
   const orderedEntries = [
-  ...(pembimbing ? [pembimbing] : []),
-  ...(root ? [root] : []),
-  ...others,
-]
+    ...(pembimbing ? [pembimbing] : []),
+    ...(root ? [root] : []),
+    ...others,
+  ]
 
   return (
     <main className="flex-grow overflow-x-hidden pt-32 pb-24">
@@ -123,7 +127,7 @@ export default function StructurePage({ initialData = null }) {
                   <Dropdown
                     value={selected}
                     onChange={setSelected}
-                    options={entries.map(([name, members]) => ({
+                    options={orderedEntries.map(([name, members]) => ({
                       value: name,
                       label: name,
                       description: `${members.length} personil`,
