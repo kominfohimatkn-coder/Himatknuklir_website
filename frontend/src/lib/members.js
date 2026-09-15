@@ -1,4 +1,5 @@
 export const divisions = [
+  'Pembimbing',
   'Badan Pengurus Harian (BPH)',
   'Divisi Internal',
   'Divisi Eksternal',
@@ -7,7 +8,6 @@ export const divisions = [
   'Divisi Minat dan Bakat',
   'Divisi Reaksi',
   'Divisi Sosmas',
-  'Pembimbing',
 ]
 
 export const positionsByDivision = {
