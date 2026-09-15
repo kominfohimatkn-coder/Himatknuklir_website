@@ -1,0 +1,29 @@
+{
+  "name": "himatkn-nextjs-react-parity",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test:security": "node scripts/verify-client-secrets.mjs",
+    "test:source-security": "node scripts/verify-source-security.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "1.24.0",
+    "next": "16.3.4",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.21",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.3.4",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.17"
+  }
+}
