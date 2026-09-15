@@ -93,6 +93,11 @@ export default function StructurePage({ initialData = null }) {
   const pembimbing = entries.find(([name]) => /pembimbing/i.test(name))
   const root = entries.find(([name]) => /badan pengurus|bph|pimpinan/i.test(name))
   const others = entries.filter(([name]) => name !== pembimbing?.[0] && name !== root?.[0])
+  const orderedEntries = [
+  ...(pembimbing ? [pembimbing] : []),
+  ...(root ? [root] : []),
+  ...others,
+]
 
   return (
     <main className="flex-grow overflow-x-hidden pt-32 pb-24">
