@@ -2,6 +2,11 @@ import './globals.css'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://himatknuklir.vercel.app'),
+
+  verification: {
+    google: 'Sx2pFLMgzASB4YHX36JZOB90daLxo42FRT4UIB6QaRI',
+  },
+  
   title: {
     default: 'HIMATKN — Himpunan Mahasiswa Teknokimia Nuklir',
     template: '%s | HIMATKN',
