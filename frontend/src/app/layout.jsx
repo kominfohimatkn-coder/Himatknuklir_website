@@ -4,7 +4,7 @@ export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://himatknuklir.vercel.app'),
 
   verification: {
-    google: 'Sx2pFLMgzASB4YHX36JZOB90daLxo42FRT4UIB6QaRI',
+    google: '91hT7UNM9E15lYViki0LIQfJEh5SFVRbejWlbkH9Dvo',
   },
   
   title: {
