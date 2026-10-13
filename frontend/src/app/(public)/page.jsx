@@ -21,7 +21,6 @@ const websiteJsonLd = {
   url: 'https://himatknuklir.vercel.app/',
 }
 
-
 export default async function Page() {
   const data = await getHome().catch(() => null)
 
