@@ -16,9 +16,9 @@ const websiteJsonLd = {
   alternateName: [
     'Himpunan Mahasiswa Teknokimia Nuklir',
     'HimaTKNuklir',
-    'himatknuklir.vercel.app',
+    'himatknuklir.web.id',
   ],
-  url: 'https://himatknuklir.vercel.app/',
+  url: 'https://www.himatknuklir.web.id',
 }
 
 export default async function Page() {
