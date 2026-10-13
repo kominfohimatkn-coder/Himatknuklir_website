@@ -1,3 +1,4 @@
+
 import HomePage from '@/screens/public/HomePage'
 import { getHome } from '@/lib/server-api'
 
@@ -8,7 +9,33 @@ export const metadata = {
   alternates: { canonical: '/' },
 }
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Himpunan Mahasiswa Teknokimia Nuklir',
+  alternateName: [
+    'HIMATKN',
+    'HimaTKNuklir',
+  ],
+  url: 'https://himatknuklir.vercel.app/',
+}
+
 export default async function Page() {
   const data = await getHome().catch(() => null)
-  return <HomePage initialData={data} />
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteJsonLd).replace(
+            /</g,
+            '\\u003c',
+          ),
+        }}
+      />
+
+      <HomePage initialData={data} />
+    </>
+  )
 }
