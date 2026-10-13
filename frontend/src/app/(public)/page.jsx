@@ -12,13 +12,15 @@ export const metadata = {
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Himpunan Mahasiswa Teknokimia Nuklir',
+  name: 'HIMATKN',
   alternateName: [
-    'HIMATKN',
+    'Himpunan Mahasiswa Teknokimia Nuklir',
     'HimaTKNuklir',
+    'himatknuklir.vercel.app',
   ],
   url: 'https://himatknuklir.vercel.app/',
 }
+
 
 export default async function Page() {
   const data = await getHome().catch(() => null)
