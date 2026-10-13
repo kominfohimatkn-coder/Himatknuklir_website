@@ -4,8 +4,9 @@ export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.himatknuklir.web.id'),
 
   verification: {
-    google: '91hT7UNM9E15lYViki0LIQfJEh5SFVRbejWlbkH9Dvo',
+    google: 'Dcyp1rUJr8u52iMRgPNozGNFHmvtN9pxOpICS-FtyTY',
   },
+  
   
   title: {
     default: 'HIMATKN — Himpunan Mahasiswa Teknokimia Nuklir',
